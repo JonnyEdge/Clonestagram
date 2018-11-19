@@ -1,22 +1,19 @@
 # React Clonestagram
 
-Image upload App
+Image upload Application 
 
 ## Getting Started
 
-### Clone down this repository (replace `<your_project_name>`:
-```
+### Clone down this repository:
 
-### Install dependencies
 
 ```bash
 npm install
 ```
+git clone git@github.com:EmSayle/Clonestagram.git
 
-### Start up the application:
+### Install dependencies
 
-```bash
-npm start
 ```
 
 ### Visit `localhost:8080` in your browser.
