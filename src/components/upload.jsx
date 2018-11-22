@@ -42,6 +42,7 @@ class Upload extends React.Component {
     this.setState({
       image: Object.assign({}, this.state.image, {
         [event.target.name]: event.target.value,
+      }),
     });
   };
 
