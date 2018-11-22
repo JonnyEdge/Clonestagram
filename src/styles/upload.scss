@@ -1,0 +1,54 @@
+.addproperty {
+  padding: 20px;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: "Comic Sans MS", "cursive", "sans-serif";
+}
+
+input {
+  font-family: "Comic Sans MS", "cursive", "sans-serif";
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 10px;
+  color: black;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  transition-duration: 0.4s;
+}
+
+input:focus {
+  background-color: white;
+}
+
+select {
+  width: 323px;
+  padding: 10px;
+  color: black;
+  background-color: lightgrey;
+  border: 1px solid grey;
+}
+
+select:focus {
+  background-color: white;
+}
+
+button {
+  background-color: lightgrey;
+  border: none;
+  color: black;
+  transition-duration: 0.4s;
+  width: 75px;
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
