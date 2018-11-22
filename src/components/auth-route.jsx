@@ -1,0 +1,20 @@
+// import React from 'react';
+// import { Route, Redirect } from 'react-router-dom';
+
+// const AuthRoute = ({
+//   exact, path, authenticate, component, 
+// }) => {
+//   const Component = component;
+//   return (
+//     <Route
+//       exact={exact}
+//       path={path}
+//       render={routeProps => (authenticate() ?
+//         <Component {...routeProps} {...props} /> :
+//         <Redirect to="/login" />
+//       )}
+//     />
+//   );
+// };
+
+// export default AuthRoute;
