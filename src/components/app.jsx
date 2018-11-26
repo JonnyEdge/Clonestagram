@@ -8,7 +8,8 @@ import { faCameraRetro } from '@fortawesome/free-solid-svg-icons';
 import SignUp from './signup';
 import Login from './login';
 import TokenManager from '../utils/token-manager';
-import AuthRoute from './auth-route';
+
+
 
 library.add(faCameraRetro);
 
@@ -43,17 +44,18 @@ class App extends React.Component {
             user={this.state.user}
             onLogout={this.handleLogout}
           />
-          {/* <AuthRoute
-            exact
-            path="/upload"
-            component={Upload}
-            authenticate={this.isLoggedIn}
-          /> */}
           <Switch>
             <Route exact path="/upload" component={Upload} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/sign-up" component={SignUp} />
             {/* <Route exact path="/feed" component={Feed} /> */}
+            <Route
+              exact
+              path="/login"
+              render={props => (
+                <Login {...props} onLogin={this.handleLogin} />
+              )}
+            />
           </Switch>
         </div>
       </React.Fragment>

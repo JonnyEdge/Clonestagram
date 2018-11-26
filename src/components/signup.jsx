@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -29,62 +30,55 @@ class SignUp extends React.Component {
       password: this.state.password,
     })
       .then(() => {
-        this.props.history.push('/login');
+        this.props.history.push('/feed');
       });
   }
 
   render() {
     return (
-      <div>
+      <form className="forms">
         <h1>Sign Up</h1>
-        <div>
-          <label htmlFor="firstName">
+        <label htmlFor="firstName">
             First Name:
-            <input
-              type="text"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="lastName">
+          <input
+            type="text"
+            name="firstName"
+            value={this.state.firstName}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <label htmlFor="lastName">
             Last Name:
-            <input
-              type="text"
-              name="lastName"
-              value={this.state.lastName}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="email">
+          <input
+            type="text"
+            name="lastName"
+            value={this.state.lastName}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <label htmlFor="email">
             Email:
-            <input
-              type="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="email">
+          <input
+            type="email"
+            name="email"
+            value={this.state.email}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <label htmlFor="email">
             Password:
-            <input
-              type="text"
-              name="password"
-              value={this.state.password}
-              onChange={this.handleInputChange}
-            />
-          </label>
-        </div>
+          <input
+            type="text"
+            name="password"
+            value={this.state.password}
+            onChange={this.handleInputChange}
+          />
+        </label>
         <div>
-          <button onClick={this.handleLogin}>Sign Up</button>
+          <button onClick={this.handleLogin}>Sign Up</button>or <Link to="/login">Log in</Link>
         </div>
-      </div>
+
+      </form>
     );
   }
 }
