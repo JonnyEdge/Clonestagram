@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/upload.scss';
 import Axios from 'axios';
+import TokenManager from '../utils/token-manager';
 
 class Upload extends React.Component {
   constructor(props) {
@@ -22,16 +23,26 @@ class Upload extends React.Component {
   }
 
   handleUploadImage = (event) => {
-    Axios.post('https://mcr-codes-image-sharing-api.herokuapp.com/images', {
+    event.preventDefault();
+
+    const token = TokenManager.getToken();
+
+    const postData = {
       image: this.state.selectedFile,
       caption: this.state.image.caption,
       tags: this.state.image.tags,
-    })
+    };
+
+    const axiosConfig = {
+      headers: {
+        Authorization: token,
+      }
+    };
+
+    Axios.post('https://mcr-codes-image-sharing-api.herokuapp.com/images', postData, axiosConfig)
       .then(function (response) {
         console.log(response);
       });
-
-    event.preventDefault();
   };
 
   handleFile = (event) => {
