@@ -32,8 +32,7 @@ class Login extends React.Component {
         console.log(response);
 
         TokenManager.setToken(response.data.token);
-        this.props.onLogin();
-        this.props.history.push('/upload');
+        this.props.history.push('/feed');
       })
       .catch((error) => {
         this.setState({ errorMessage: error.response });
