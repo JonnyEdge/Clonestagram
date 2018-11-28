@@ -39,7 +39,7 @@ class Login extends React.Component {
 
   handleInputChange(event) {
     this.setState({ [event.target.name]: event.target.value });
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   render() {
@@ -56,7 +56,6 @@ class Login extends React.Component {
         <div>
           { <p>{this.state.errorMessage}</p>}
         </div>
-        
       </React.Fragment>
     );
   }

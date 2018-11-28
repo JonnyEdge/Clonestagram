@@ -26,7 +26,7 @@ const NavBar = ({ user, isLoggedIn, onLogout }) => (
     <h1><FontAwesomeIcon icon="camera-retro" />  Clonestagram</h1>
     <ul className="nav">
       <Link className="item" to="/">Feed</Link>
-      <Link className="item" to="/upload">Upload</Link>
+      {/* <Link className="item" to="/upload">Upload</Link> */}
       <Link className="item" to="/login">Login</Link>
       <Link className="item" to="/sign-up">Sign Up</Link>
     </ul>

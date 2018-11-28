@@ -10,7 +10,6 @@ import Login from './login';
 import TokenManager from '../utils/token-manager';
 
 
-
 library.add(faCameraRetro);
 
 class App extends React.Component {
@@ -23,7 +22,7 @@ class App extends React.Component {
   }
 
   handleLogin = () => {
-    this.setState({ user: TokenManager.getTokenPayload });
+    this.setState({ user: TokenManager.getTokenPayload() });
   };
 
   handleLogout = () => {
@@ -53,7 +52,10 @@ class App extends React.Component {
               exact
               path="/login"
               render={props => (
-                <Login {...props} onLogin={this.handleLogin} />
+                <Login
+                  {...props}
+                  onLogin={this.props.handleLogin}
+                />
               )}
             />
           </Switch>
